@@ -23,4 +23,6 @@ public class Books
     public int AuthorId { get; set; }
 
     public Author? Author { get; set; }
+
+    public List<Reservations>? Reservations { get; set; }
 }

@@ -10,4 +10,10 @@ public class LibraryDbContext : DbContext
     }
 
     public DbSet<Books> Books { get; set; }
+
+    public DbSet<User> Users { get; set; }
+
+    public DbSet<Author> Authors { get; set; }
+
+    public DbSet<Reservations> Reservations { get; set; }
 }

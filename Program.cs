@@ -13,7 +13,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<LibraryDbContext>(i=>
 {
-    i.UseSqlServer("Data Source=DESKTOP-2DB9EPL\\SQLEXPRESS;Initial Catalog=master;Trusted_Connection=True;TrustServercertificate=true");
+    i.UseSqlServer("Data Source=DESKTOP-2DB9EPL\\SQLEXPRESS;Initial Catalog=LibraryManagementStudio;Trusted_Connection=True;TrustServercertificate=true");
 });
 
 var app = builder.Build();
