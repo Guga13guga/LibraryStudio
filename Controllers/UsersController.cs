@@ -17,6 +17,10 @@ public class UsersController : ControllerBase
         _userService = new GenericService<User>(context);
     }
 
+    /// <summary>
+    /// Get all users
+    /// </summary>
+    /// <returns></returns>
     [HttpGet("GetAll")]
     public IActionResult GetAll()
     {
@@ -25,6 +29,11 @@ public class UsersController : ControllerBase
         return Ok(all);
     }
 
+    /// <summary>
+    /// get specify user
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
     [HttpGet("GetById/{id}")]
     public  IActionResult GetById(int id)
     {
@@ -33,6 +42,11 @@ public class UsersController : ControllerBase
         return Ok(user);
     }
 
+    /// <summary>
+    /// register user
+    /// </summary>
+    /// <param name="user"></param>
+    /// <returns></returns>
     [HttpPost("AddNewUser")]
     public IActionResult AddNewUser(User user)
     {
@@ -40,6 +54,11 @@ public class UsersController : ControllerBase
         return Ok();
     }
 
+    /// <summary>
+    /// Delete user by id
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
     [HttpDelete("DeleteUserById/{id}")]
     public IActionResult Delete(int id)
     {
@@ -47,6 +66,11 @@ public class UsersController : ControllerBase
         return Ok("User deleted");
     }
 
+    /// <summary>
+    /// update user, you must pass Id
+    /// </summary>
+    /// <param name="user"></param>
+    /// <returns></returns>
     [HttpPut("UpdateUser")]
     public IActionResult UpdateUser(User user)
     {
